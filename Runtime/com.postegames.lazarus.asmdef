@@ -1,0 +1,20 @@
+{
+    "name": "com.postegames.lazarus",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5d2de123429b952439048354a2e815c1",
+        "GUID:320e6532ec885b142a3fb20a1602bf4f",
+        "GUID:777455037b3e6dd47a832372b9042dd6",
+        "GUID:621d8e93730e9d04b8b00a19e7914ce1",
+        "GUID:01112215c5eed6a419b30b02a246119d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

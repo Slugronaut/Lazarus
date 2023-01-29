@@ -1,0 +1,27 @@
+{
+  "name": "com.postegames.lazarus",
+  "version": "1.0.0",
+  "displayName": "PEGLIB - Lazarus",
+  "description": "A GameObject-oriented pooling system.",
+  "unity": "2022.2",
+  "keywords": [
+    "pool",
+    "pooling",
+    "gameobject",
+    "util",
+    "utility",
+    "library"
+  ],
+  "author": {
+    "name": "Sluggy",
+    "email": "jcsluggy@gmail.com",
+    "url": "http:/postegames.com"
+  },
+  "dependencies": {
+    "com.postegames.autocreatable": "",
+    "com.postegames.collections": "",
+    "com.trinary.moreeffectivecouroutines": "",
+    "com.postegames.typehelper": "",
+    "com.postegames.unityextensions": ""
+  }
+}
