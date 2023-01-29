@@ -1,7 +1,7 @@
 # Lazarus
 A GameObject-oriented pooling system.
 
-Dependencies:
+Dependencies:  
 [com.postegames.autocreatable](https://github.com/Slugronaut/Toolbox-AutoCreatable)  
 [com.postegames.collections](https://github.com/Slugronaut/Toolbox-Collections)  
 [com.postegames.typehelper](https://github.com/Slugronaut/Toolbox-TypeHelper)  
