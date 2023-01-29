@@ -7,5 +7,5 @@ Dependencies:
 [com.postegames.typehelper](https://github.com/Slugronaut/Toolbox-TypeHelper)  
 [com.postegames.unityextensions](https://github.com/Slugronaut/Toolbox-UnityExtensions)
 
-Third-Party Dependencies:
+Third-Party Dependencies:  
 [More Effective Couroutines](http://trinary.tech/category/mec/) - The free version will suffice.  
