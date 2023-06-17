@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+//#define SKIP_UNITYOBJECTPOOL
 using NUnit.Framework;
 using UnityEngine;
 using UnityEditor;
@@ -262,12 +263,14 @@ namespace Toolbox.Lazarus.Editor.Tests
         public void OverdrawnPoolReturnsToMaxSizeAfterRelenquish()
         {
             SetupTest();
+#if SKIP_UNITYOBJECTPOOL
             if (Laz.PoolAllocatorType == Lazarus.PoolAllocatorTypes.UnityObjectPool)
             {
                 Assert.Inconclusive("Currently fails when using UnityPoolAllocator due to a bug in Unity's ObjectPool<> which does not properly track the active count after returning items to a pool that is already full.");
                 ShutdownTest();
                 return;
             }
+#endif
             var prefab1 = AssetDatabase.LoadAssetAtPath<GameObject>(Prefab001Path);
             Laz.DefaultChunkSize = 1;
             Laz.DefaultCapacity = 1;
@@ -371,12 +374,14 @@ namespace Toolbox.Lazarus.Editor.Tests
         public IEnumerator RelenquishDestroysItemsWhenPoolIsFull()
         {
             SetupTest();
+#if SKIP_UNITYOBJECTPOOL
             if(Laz.PoolAllocatorType == Lazarus.PoolAllocatorTypes.UnityObjectPool)
             {
                 Assert.Inconclusive("Currently fails when using UnityPoolAllocator due to a bug in Unity's ObjectPool<> which does not properly track the active count after returning items to a pool that is already full.");
                 ShutdownTest();
                 yield break;
             }
+#endif
             var prefab1 = AssetDatabase.LoadAssetAtPath<GameObject>(Prefab001Path);
             var pool = Laz.GetAssociatedPool(prefab1);
 
