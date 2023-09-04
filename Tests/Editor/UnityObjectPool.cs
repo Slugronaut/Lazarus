@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace Toolbox.Lazarus.Editor.Tests
+namespace Peg.Lazarus.Editor.Tests
 {
     /// <summary>
     /// 

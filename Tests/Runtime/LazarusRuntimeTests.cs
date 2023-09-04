@@ -3,13 +3,13 @@
 using NUnit.Framework;
 using UnityEngine;
 using UnityEditor;
-using Toolbox.AutoCreate;
+using Peg.AutoCreate;
 using UnityEngine.TestTools;
 using System.Collections;
 using System.Collections.Generic;
 
 
-namespace Toolbox.Lazarus.Editor.Tests
+namespace Peg.Lazarus.Editor.Tests
 {
     /// <summary>
     /// Base class for implementing tests. Derived classes are used to change allocator types.

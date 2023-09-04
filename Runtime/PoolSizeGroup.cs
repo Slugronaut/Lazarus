@@ -1,6 +1,6 @@
 using System;
 
-namespace Toolbox.Lazarus
+namespace Peg.Lazarus
 {
     /// <summary>
     /// A group of values that represent the pool alloc sizes associated with a specfic pool.

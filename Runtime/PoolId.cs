@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Toolbox
+namespace Peg
 {
     /// <summary>
     /// A special component that is automatically and invisibly added to any object

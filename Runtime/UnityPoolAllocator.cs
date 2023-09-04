@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Toolbox.Collections;
+using Peg.Util;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 
 
-namespace Toolbox.Lazarus
+namespace Peg.Lazarus
 {
     /// <summary>
     /// Custom pool allocator using Unity's built-in ObjectPool<> as a backing datatype.

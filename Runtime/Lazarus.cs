@@ -5,13 +5,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Toolbox.AutoCreate;
+using Peg.AutoCreate;
 using UnityEngine.Assertions;
 using System.Runtime.Serialization;
 using System.Linq;
 using Sirenix.OdinInspector;
 
-namespace Toolbox.Lazarus
+namespace Peg.Lazarus
 {
     /// <summary>
     /// This is a general-purpose utility for instantiating 
@@ -43,7 +43,7 @@ namespace Toolbox.Lazarus
         [InfoBox("Unity's built-in allocator ObjectPool<> currently has a bug that disallows it from properly tracking objects correctly. Do not use this allocator.")]
         public PoolAllocatorTypes PoolAllocatorType;
         [Tooltip("The number of preallocated and max allocated spaces for the pool for a given blueprint.")]
-        public Toolbox.Collections.HashMap<GameObject, PoolSizeGroup> PoolAllocations = new();
+        public Peg.Util.HashMap<GameObject, PoolSizeGroup> PoolAllocations = new();
         
 
         Dictionary<int, IPoolAllocator> Pools;

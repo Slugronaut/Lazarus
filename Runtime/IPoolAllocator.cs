@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Toolbox.Lazarus
+namespace Peg.Lazarus
 {
     /// <summary>
     /// 

@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-namespace Toolbox
+namespace Peg
 {
     /// <summary>
     /// Somtimes the PoolPreloader has to allow objects

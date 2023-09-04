@@ -1,7 +1,7 @@
 #if UNITY_EDITOR
 using UnityEngine;
 
-namespace Toolbox.Lazarus.Editor.Tests
+namespace Peg.Lazarus.Editor.Tests
 {
     /// <summary>
     /// Used by Lazarus unit tests to determine if objects are being destroyed at the correct time.

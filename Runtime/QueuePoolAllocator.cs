@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-namespace Toolbox.Lazarus
+namespace Peg.Lazarus
 {
     /// <summary>
     /// Custom pool allocator using a Queue<> as a backing datatype.
