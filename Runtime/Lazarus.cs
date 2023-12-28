@@ -43,7 +43,7 @@ namespace Peg.Lazarus
         [InfoBox("Unity's built-in allocator ObjectPool<> currently has a bug that disallows it from properly tracking objects correctly. Do not use this allocator.")]
         public PoolAllocatorTypes PoolAllocatorType;
         [Tooltip("The number of preallocated and max allocated spaces for the pool for a given blueprint.")]
-        public Peg.Util.HashMap<GameObject, PoolSizeGroup> PoolAllocations = new();
+        public Peg.Collections.HashMap<GameObject, PoolSizeGroup> PoolAllocations = new();
         
 
         Dictionary<int, IPoolAllocator> Pools;
