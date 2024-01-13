@@ -1,5 +1,5 @@
 #if UNITY_EDITOR
-//#define SKIP_UNITYOBJECTPOOL
+#define UNITYOBJECTPOOLISBROKEN
 using NUnit.Framework;
 using UnityEngine;
 using UnityEditor;
@@ -263,6 +263,7 @@ namespace Peg.Lazarus.Editor.Tests
         public void OverdrawnPoolReturnsToMaxSizeAfterRelenquish()
         {
             SetupTest();
+            /*
 #if SKIP_UNITYOBJECTPOOL
             if (Laz.PoolAllocatorType == Lazarus.PoolAllocatorTypes.UnityObjectPool)
             {
@@ -271,6 +272,7 @@ namespace Peg.Lazarus.Editor.Tests
                 return;
             }
 #endif
+            */
             var prefab1 = AssetDatabase.LoadAssetAtPath<GameObject>(Prefab001Path);
             Laz.DefaultChunkSize = 1;
             Laz.DefaultCapacity = 1;
@@ -311,8 +313,20 @@ namespace Peg.Lazarus.Editor.Tests
             Laz.RelenquishToPool(list[5]);
             Laz.RelenquishToPool(list[4]);
             Laz.RelenquishToPool(list[3]);
+#if UNITYOBJECTPOOLISBROKEN
+            if (Laz.PoolAllocatorType == Lazarus.PoolAllocatorTypes.UnityObjectPool)
+            {
+                //we should be overdrawn by 2 here so if this fails it means Unity finally fixed their fucking shit.
+                Assert.AreEqual(3, pool.CountActive-2);
+                Assert.AreEqual(10, pool.CountInactive);
+                Assert.Inconclusive("Currently fails when using UnityPoolAllocator due to a bug in Unity's ObjectPool<> which does not properly track the active count after returning items to a pool that is already full.");
+                ShutdownTest();
+                return;
+            }
+#else
             Assert.AreEqual(3, pool.CountActive);
             Assert.AreEqual(10, pool.CountInactive);
+#endif
 
             ShutdownTest();
         }
